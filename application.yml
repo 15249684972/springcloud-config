@@ -6,10 +6,10 @@
 spring: 
   profiles: dev
   application: 
-    name springcloud-config-wk-dev
+    name: springcloud-config-wk-dev
 ---
 spring: 
   profiles: test
   application: 
-    name springcloud-config-wk-test
+    name: springcloud-config-wk-test
 #保存utf-8格式

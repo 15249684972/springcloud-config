@@ -9,10 +9,10 @@ spring:
   profiles: dev
   application: 
     name: springcloud-config-client
-eureka: 
-  client: 
+eureka:
+  client:
     service-url:
-      defaultZone: http://eureka01.com:7001/eureka/
+      defaultZone: http://eureka01.com:7001/eureka/,http://eureka02.com:7002/eureka/,http://eureka03.com:7003/eureka/
 ---
 server: 
   port: 8202
@@ -20,7 +20,7 @@ spring:
   profiles: test
   application: 
     name: springcloud-config-client
-eureka: 
-  client: 
+eureka:
+  client:
     service-url:
-      defaultZone: http://eureka01.com:7001/eureka/
+      defaultZone: http://eureka01.com:7001/eureka/,http://eureka02.com:7002/eureka/,http://eureka03.com:7003/eureka/
