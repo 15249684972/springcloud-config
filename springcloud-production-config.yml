@@ -15,7 +15,7 @@ spring:
     restart: 
       enabled: true
   datasource:
-    url: jdbc:mysql://127.0.0.1/hibernate?characterEncoding=utf-8
+    url: jdbc:mysql://127.0.0.1/hibernate2?characterEncoding=utf-8
     username: root
     password: 123456
     driverClassName: com.mysql.jdbc.Driver
@@ -48,7 +48,7 @@ spring:
     restart: 
       enabled: true
   datasource:
-    url: jdbc:mysql://127.0.0.1/hibernate2?characterEncoding=utf-8
+    url: jdbc:mysql://127.0.0.1/hibernate1?characterEncoding=utf-8
     username: root
     password: 123456
     driverClassName: com.mysql.jdbc.Driver
