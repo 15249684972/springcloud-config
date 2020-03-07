@@ -1,0 +1,70 @@
+spring: 
+  profiles: 
+    active: 
+    - dev
+---
+# 服务端口号
+server:
+  port: 8001
+# 服务名称
+spring:
+  profiles: dev
+  application:
+    name: springcloud-production-config
+  devtools: 
+    restart: 
+      enabled: true
+  datasource:
+    url: jdbc:mysql://127.0.0.1/hibernate?characterEncoding=utf-8
+    username: root
+    password: 123456
+    driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
+        format_sql: true
+        dialect: cn.wk.springcloud.dialect.MySQL5DialectUTF8
+  
+#Eureka 相关配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka01.com:7001/eureka/
+    instance:
+      prefer-ip-address: true
+---
+# 服务端口号
+server:
+  port: 8002
+# 服务名称
+spring:
+  profiles: test
+  application:
+    name: springcloud-production-config
+  devtools: 
+    restart: 
+      enabled: true
+  datasource:
+    url: jdbc:mysql://127.0.0.1/hibernate2?characterEncoding=utf-8
+    username: root
+    password: 123456
+    driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
+        format_sql: true
+        dialect: cn.wk.springcloud.dialect.MySQL5DialectUTF8
+  
+#Eureka 相关配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka01.com:7001/eureka/
+    instance:
+      prefer-ip-address: true
